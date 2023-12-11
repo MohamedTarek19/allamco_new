@@ -1,0 +1,81 @@
+Row(
+                              children: [
+                                Container(
+                                  width: 88,
+                                  height: MediaQuery.of(context).size.height*0.06 >= 40? 40:MediaQuery.of(context).size.height*0.06,
+                                  decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      border: Border.all(
+                                          color: Colors.grey[300]!),
+                                      borderRadius:
+                                      BorderRadius.circular(5)),
+                                  margin: const EdgeInsets.only(right: 10),
+                                  child: LayoutBuilder(
+                                    builder: (context, tagConstraints) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 8.0, left: 8),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment
+                                              .spaceBetween,
+                                          children: [
+                                            CircleAvatar(
+                                              minRadius: tagConstraints.maxHeight >=37? 11.2:8,
+                                              maxRadius: tagConstraints.maxHeight >=37? 11.2:8,
+                                              child: Image.asset(
+                                                  'assets/images/egypt.png'),
+                                            ),
+                                            const FittedBox(
+                                              fit:BoxFit.contain,
+                                              child: Text(
+                                                'Egypt',
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                                Container(
+                                  width: 88,
+                                  height: MediaQuery.of(context).size.height*0.06 >= 40? 40:MediaQuery.of(context).size.height*0.06,
+                                  decoration: BoxDecoration(
+                                      color: Colors.transparent,
+                                      border: Border.all(
+                                          color: Colors.grey[300]!),
+                                      borderRadius:
+                                      BorderRadius.circular(5)),
+                                  margin: const EdgeInsets.only(right: 10),
+                                  child: LayoutBuilder(
+                                    builder: (BuildContext context, BoxConstraints tagConstraints) {
+                                      return Padding(
+                                        padding: const EdgeInsets.only(
+                                            right: 8.0, left: 8),
+                                        child: Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment
+                                              .spaceBetween,
+                                          children: [
+                                            Icon(
+                                              Icons.check_circle_outline,
+                                              color: Colors.green,
+                                              size: tagConstraints.maxHeight >= 30?22:17,
+                                            ),
+                                            const FittedBox(
+                                              fit: BoxFit.contain,
+                                              child: Text(
+                                                'Ready',
+                                                style:
+                                                TextStyle(fontSize: 15),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      );
+                                    },
+                                  ),
+                                ),
+                              ],
+                            ),
